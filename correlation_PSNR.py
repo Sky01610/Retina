@@ -24,10 +24,13 @@ def calculate_psnr(img1_path, img2_path):
 
     return psnr
 
-
+#初始化总值
+all=0
 # 测试代码
 for i in range (19):
     img1_path = f"Groudtruth/{i}.png"
     img2_path = f"results/{i}.png"
     psnr_value = calculate_psnr(img1_path, img2_path)
     print(f"PSNR between the {i} images: {psnr_value} dB")
+
+print(f"PSNR in average ={all/20}")
